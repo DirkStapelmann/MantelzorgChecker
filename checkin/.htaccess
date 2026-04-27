@@ -1,0 +1,18 @@
+# Blokkeer directe toegang tot configuratie bestanden
+
+<Files "config.php">
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files "config-secure.php">
+Order Allow,Deny
+Deny from all
+</Files>
+
+# Blokkeer toegang tot hidden files
+
+<FilesMatch "^\.">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
